@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>photolog</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-<body>
-    <header>
-        <%- include('./partials/navbar') %>
-    </header>
-<main>
-    <%- include('./partials/card') %>
 
-</main>
-      <footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-      </footer>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>photolog</title>
+  <link rel="stylesheet" href="http://localhost:3000/static/styles/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+  <header>
+    <%- include('./partials/navbar') %>
+  </header>
+  <main>
+    <div class="gridcontainer">
+      <% for (let i=0; i < 8; i++){ %>
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="http://localhost:3000/static/img/0<%= i+1 %>.JPG" alt="image not found">
+          <div class="card-body">
+            <h5 class="card-title">nama/judul foto</h5>
+            <h5 class="card-title">tanggal upload</h5>
+
+          </div>
+          <div class="tags">tema :
+            <span class="badge badge-primary">alam</span>
+            <span class="badge badge-secondary">wisata</span>
+          </div>
+          <div class="card-body">
+            <a href="#" class="card-link">download</a>
+            <a href="#" class="card-link">donate</a>
+          </div>
+        </div>
+        <% } %>
+    </div>
+  </main>
+  <footer>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+  crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -21,6 +21,7 @@ npx sequelize-cli seed:generate --name demo-Photo
 npx sequelize-cli seed:generate --name demo-PhotoTag
 
 // skeleton
+npx sequelize-cli migration:generate --name add-date-to-Photo
 
 
 
